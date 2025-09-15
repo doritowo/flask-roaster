@@ -1,11 +1,18 @@
-<form method="POST">
-  <label>Type your name here *wink*</label>
-  <input type="text" name="username">
-  <button type="submit">Roast me</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roaster</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='samplestyle.css') }}">
+</head>
+<body>
+  <form method="POST">
+    <label>Type your name here *wink*</label>
+    <input type="text" name="username">
+    <button type="submit">Roast me</button>
+  </form>
 
-{% if roast %}
-  <p style="color:pink; font-weight:bold; font-size:35px;">
-    {{ roast }}
-  </p>
-{% endif %}
+  {% if roast %}
+    <p>{{ roast }}</p>
+  {% endif %}
+</body>
+</html>
